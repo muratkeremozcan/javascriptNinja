@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-function sum(...parameters) { // the difference in rest parameters is we can use any array methods on it
+function sum(...parameters) { // the difference & advantage in rest parameters is we can use any array methods on it
   var sum = 0;
   for (var i = 0; i < parameters.length; i++) { // we can iterate through any passed in arguments
     sum += parameters[i];

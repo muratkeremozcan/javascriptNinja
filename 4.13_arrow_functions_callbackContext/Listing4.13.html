@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="test">Click Me!</button>
+  <script>
+    function Button(){ // a constructor function that creates objects that retains the button state
+      this.clicked = false;
+      this.click = () => { // the click handler. Object>>Arrow function -> the context is the object in the arrow function
+        this.clicked = true;
+        return console.log('Is button clicked? ' + button.clicked); // output the button state
+      };
+    }
+    var button = new Button(); // instantiate a button object
+    var elem = document.getElementById("test"); // element is the button with test as id
+    elem.addEventListener("click", button.click); // event listener/handler on button object's click function
+  </script>
+</body>
+</html>

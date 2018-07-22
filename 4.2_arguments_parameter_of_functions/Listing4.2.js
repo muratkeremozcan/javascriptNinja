@@ -1,7 +1,11 @@
 var assert = require('assert');
 
+// arguments and this are 2 implicit parameters in functions
 function sum() { // function with no parameters
   var sum = 0;
+  // arguments parameter has a length property, which gives us the number of arguments passed in to the function
+  // arguments parameter can also be used to access each individual parameter passed in
+  // BUT it's not a JS array! It is an array-like construct
   for (var i = 0; i < arguments.length; i++) { // but we can iterate through any passed in arguments
     sum += arguments[i];
   }
