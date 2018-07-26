@@ -11,6 +11,7 @@
   <div id="box2">First Box</div>
     <script>
       function animateIt(elementId){
+        // CLOSURE: this environment is kept alive until there are no functions that work with these variables: until the clearInterval method is called
         var elem = document.getElementById(elementId); // create a reference to the element we want to animate
         var tick = 0; // counter to track animation ticks
         var timer = setInterval(function () { // setInterval is a built-in function that creates and starts an interval timer, given a callback
@@ -26,8 +27,9 @@
           }
         }, 10); // the setInterval duration: callback called every 10 ms
       }
+      // IMPORTANT: CLOSURES : the closure environment is kept alive as long as there's a function that works with its variables, we are on a different page and/or things get garbage collected
       animateIt('box1'); // animate the div First Box
-      animateIt('box2');
+      animateIt('box2'); // every time we call animateIt, a new lexical environment (scope) is created
     </script>
 </body>
 </html>
