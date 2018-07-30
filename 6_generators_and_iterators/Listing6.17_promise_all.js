@@ -24,19 +24,29 @@ function getJSON(url) {
     request.send(); // send the request
   });
 }
-// CATCH SYNTAX IS MUCH EASIER AND ENABLES LESS CODE
-getJSON('http://localhost:8080/data/ninjas.json')
-  .then(ninjas => getJSON(ninjas[0].missionsUrl))
-  .then(missions => getJSON(missions[0].detailsUrl))
-  .then(plan => console.log(plan.target))
-  .catch(error => console.log('should not be here ', error));
+// the promise.all method takes an array of promises, and creates a new promise that succeeds if all promises succeed and fails if any promise fail
+Promise.all([getJSON('http://localhost:8080/data/ninjas.json'),
+    getJSON('http://localhost:8080/data/mapInfo.json'),
+    getJSON('http://localhost:8080/data/plan.json')
+  ])
+  .then(results => { // NEW the result is an array of values, in the order of passed in promises
+    const ninjas = results[0],
+      mapInfo = results[1],
+      plan = results[2];
+    // const ninjas = results[0];
+    // const mapInfo = results[1];
+    // const plan = results[2];
+    console.log(ninjas);
+    console.log(mapInfo);
+    console.log(plan);
+  }).catch(error => {
+    console.log(error);
+  });
 
-// getJSON('http://localhost:8080/data/ninjas.json').then(ninjas => {
-//   getJSON(ninjas[0].missionsUrl).then(missions => {
-//     getJSON(missions[0].detailsUrl).then(plan => {
-//       console.log(plan.target)
-//     });
-//   });
-// }, error => {
-//   console.log('should not be here ', error);
-// });
+
+// CATCH SYNTAX IS MUCH EASIER AND ENABLES LESS CODE
+// getJSON('http://localhost:8080/data/ninjas.json')
+//   .then(ninjas => getJSON(ninjas[0].missionsUrl))
+//   .then(missions => getJSON(missions[0].detailsUrl))
+//   .then(plan => console.log(plan.target))
+//   .catch(error => console.log('should not be here ', error));
