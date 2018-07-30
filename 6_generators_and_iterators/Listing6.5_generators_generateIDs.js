@@ -1,15 +1,14 @@
 var assert = require('assert');
 function* IdGenerator() {
   let id = 0; // to keep track of the id
-  while(true) { // generates infinate ids
+  while(true) { // generates infinite ids
     yield ++id;
   }
 }
 const idIterator = IdGenerator(); // ITERATOR: calling a GENERATOR creates an ITERATOR through which we control the generator's execution
 
-// NEXT() method requests a new value from the generator
+// NEXT() method requests a new value from the generator . An object is produced { value: 1, done: false}
 // .VALUE property gives the value of the current produced object
-// looks like { value: 1, done: false}
 // const initialIteratorValue = idIterator.next().value;
 // console.log(initialIteratorValue);
 
