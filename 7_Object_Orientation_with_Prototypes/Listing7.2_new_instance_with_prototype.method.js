@@ -1,5 +1,6 @@
 var assert = require('assert');
 
+// every function has a prototype object that is set as the prototype of the of the objects created with that function
 function Ninja() {
   Ninja.prototype.swingSword = function () { // every function has a PROTOTYPE object we can modify
     return true;

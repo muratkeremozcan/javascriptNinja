@@ -21,3 +21,5 @@ console.log(ninja instanceof Ninja); // true
 console.log(ninja instanceof Person); // true
 console.log(ninja instanceof Object); // true
 console.log(typeof ninja.dance); // function
+
+console.log('constructor' in ninja); // this returns true, but the constructor belongs to  Person fun ction

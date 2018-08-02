@@ -5,9 +5,7 @@ const hattori = {sneak: true};
 const kuma = { creep: true };
 
 // to test whether an object has access to a property, we can use the IN operator
-assert ('skulk' in yoshi, 'error: skulk property NOT in yoshi');
-assert (!('sneak' in yoshi));
-assert (!('creep' in yoshi));
+// '<property>' in <object>
 console.log('skulk' in yoshi);
 console.log('sneak' in yoshi);
 console.log('creep' in yoshi);

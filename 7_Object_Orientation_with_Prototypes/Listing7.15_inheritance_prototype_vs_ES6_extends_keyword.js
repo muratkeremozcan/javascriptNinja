@@ -5,7 +5,7 @@ function Person(name) {
 Person.prototype.dance = function(){}; // every function has a PROTOTYPE object we can modify
 function Ninja(){}
 Ninja.prototype = new Person(); // SubClass.prototype = new SuperClass()
-// IMPORTANT: when setting inheritance with the above, constructor property gets messed up for Ninja
+// IMPORTANT: when setting inheritance with the above, constructor property gets messed up for Ninja, because it's at Person
 // IMPORTANT: so we fix the constructor property of Ninja
 Object.defineProperty(Ninja.prototype, "constructor", { // Object.defineProperty method (object, "name of property" , {attributes of property})
   enumerable: false,
@@ -24,7 +24,7 @@ class PersonClass {
 }
 class NinjaClass extends PersonClass { // uses the EXTENDS keyword to inherit from another class
   constructor(name, weapon) {
-    super(name); // uses the SUPER keyword to call the base class constructor. THIS MAKES EVERYTHING HAPPEN
+    super(name); // uses the SUPER keyword to call the base class constructor. THIS MAKES EVERYTHING HAPPEN. must call with 1 argument, any argument works
     this.weapon = weapon;
   }
   wieldWeapon() {

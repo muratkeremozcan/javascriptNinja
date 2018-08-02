@@ -19,5 +19,5 @@ class NinjaClass {
   }
 }
 var ninjaClass = new NinjaClass("Yoshi in Class");
-console.log(ninja.name);
-console.log(ninja.swingSword);
+console.log(ninjaClass.name);
+console.log(ninjaClass.swingSword);
