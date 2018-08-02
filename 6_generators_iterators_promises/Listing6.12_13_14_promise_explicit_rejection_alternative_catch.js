@@ -15,22 +15,28 @@ const promiseExplicitRejectWithCatch = new Promise( (resolve, reject) => { // al
 // we can chain in the catch method after the then method to also provide an error callback
 promiseExplicitRejectWithCatch.then( () => {
   console.log('will not be called, no success');
-}).catch( () => {
+}).catch( () => { // instead of supplying the  error (2nd) callback, we can chain in the catch method and pass to it the error callback
   console.log('Alternative syntax with CATCH. the promise was explicitly rejected');
 });
 
-// IMPLICITLY REJECT
+// IMPLICITLY REJECT 
 const promiseImplicitReject = new Promise ( (resolve, reject) => {
   undeclaredVariable++; // this variable is not defined, will throw implicit
 });
+
 promiseImplicitReject.then( () => {
+  console.log('happy path will not be reached');
+}, error => {
+  console.log('Implicit promise rejected');
+});
+
+// IMPLICITLY REJECT with CATCH
+const promiseImplicitRejectWithCatch = new Promise ( (resolve, reject) => {
+  undeclaredVariable++; // this variable is not defined, will throw implicit
+});
+
+promiseImplicitRejectWithCatch.then( () => {
   console.log('happy path will not be reached');
 }).catch( () => {
   console.log('Implicit promise rejected');
 });
-// alternative syntax
-// promiseImplicitReject.then( () => {
-//   console.log('happy path will not be reached');
-// }, error => {
-//   console.log('Implicit promise rejected');
-// });

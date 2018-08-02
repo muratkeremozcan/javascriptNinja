@@ -26,10 +26,10 @@ function getJSON(url) {
 }
 
 // NEW: ASYNC AWAITs combine generators and promises. The below code replaces everything in the 6.19 example
-// you may need new ES features, babel or typescript to use async await. Disregard the errors, and this works
+// you may need new ES features, babel or typescript to use async await. Disregard the lint errors, and this works
 async function asyncFunction () { // passing in a GENERATOR to the function named async. Using asynchronous results, should be able to pause while waiting for results
   try {
-    const ninjas = await getJSON('http://localhost:8080/data/ninjas.json'); // yield keyword produces values one at a time, when the generator is asked for a value
+    const ninjas = await getJSON('http://localhost:8080/data/ninjas.json');
     const missions = await getJSON(ninjas[0].missionsUrl);
     const missionDescription = await getJSON(missions[0].detailsUrl);
     console.log(missionDescription);

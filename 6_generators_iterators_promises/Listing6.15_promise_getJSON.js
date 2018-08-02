@@ -4,6 +4,7 @@ var assert = require('assert');
 function getJSON(url) {
   return new Promise((resolve, reject) => { // creates an returns a new promise
     const request = new XMLHttpRequest(); // creates an XMLHTTPRequest object
+    // XMLHttpRequest object offers 3 methods : open, onload and onerror
     request.open("GET", url); // initializes the request 
     request.onload = function () { // on load, registers an event handler that will be called if the server has loaded
       try { // ERROR TYPE 2 server responding with unanticipated data ()   (change get passed in url to  '/data/ninjas.json')

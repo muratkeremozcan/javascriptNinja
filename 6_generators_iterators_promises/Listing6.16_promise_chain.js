@@ -33,10 +33,13 @@ getJSON('http://localhost:8080/data/ninjas.json')
   .catch(error => console.log('should not be here ', error)); // catches promise rejections in any of the steps
 
 
-  
+
 // getJSON('http://localhost:8080/data/ninjas.json').then(ninjas => {
+//   console.log(ninjas);
 //   getJSON(ninjas[0].missionsUrl).then(missions => {
+//     console.log(missions);
 //     getJSON(missions[0].detailsUrl).then(plan => {
+//       console.log(plan);
 //       console.log(plan.target)
 //     });
 //   });

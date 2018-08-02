@@ -24,13 +24,15 @@ function getJSON(url) {
     request.send(); // send the request
   });
 }
-// the promise.all method takes an array of promises, and creates a new promise that succeeds if all promises succeed and fails if any promise fail
-Promise.all([getJSON('http://localhost:8080/data/ninjas.json'),
+// the promise.all method takes an array of promises, and creates a new promise that succeeds if all promises succeed and fails if any promise fails
+Promise.all([
+    getJSON('http://localhost:8080/data/ninjas.json'),
     getJSON('http://localhost:8080/data/mapInfo.json'),
     getJSON('http://localhost:8080/data/plan.json')
   ])
   .then(results => { // NEW the result is an array of values, in the order of passed in promises
-    const ninjas = results[0],
+    const
+      ninjas = results[0],
       mapInfo = results[1],
       plan = results[2];
     // const ninjas = results[0];
