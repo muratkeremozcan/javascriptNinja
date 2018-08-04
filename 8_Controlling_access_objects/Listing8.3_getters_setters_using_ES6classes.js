@@ -11,7 +11,7 @@ class NinjaCollection {
     this.ninjas[0] = value;
   }
 }
-const ninjaCollection = new NinjaCollection();
+const ninjaCollection = new NinjaCollection(); // create an object instance
 console.log(ninjaCollection.firstNinja);
 
 ninjaCollection.firstNinja = "Hachi";; // to set, assign a value to the property

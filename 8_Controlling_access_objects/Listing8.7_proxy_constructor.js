@@ -1,8 +1,8 @@
-const emperor = { name: "Komei"};
+const emperor = { name: "Komei"}; // this will be the target object
 const representative = new Proxy(emperor, { // proxy constructor takes in the object it's the proxy for (emperor: TARGET OBJECT)
   get: (target, key) => { // get trap, for reading the object. If the target object has the property, return the property, if not return a message
     console.log('Reading ' + key + ' through a proxy');
-    return key in target ? target[key]: "Don't bother the emperor!"; // target.key exists? if not 
+    return key in target ? target[key] : "Don't bother the emperor!"; // target.key exists? if not don't bother
     // if (key in target) {
     //   return target[key];
     // } else {
@@ -15,8 +15,8 @@ const representative = new Proxy(emperor, { // proxy constructor takes in the ob
   }
 });
 
-console.log(emperor.name); // target.key = Komei
-console.log(representative.name); // target.key = Komei. We can get a property through proxy
+console.log(emperor.name); // target.key = Komei , regular access
+console.log(representative.name); // target.key = Komei. Proxy access. We can get a property through proxy
 
 console.log(emperor.nickname); // accessing a non-existing property returns undefined
 console.log(representative.nickname); // the proxy jumps in when we make an invalid request

@@ -9,4 +9,4 @@ function Ninja() {
 const ninja =  new Ninja();
 
 ninja.setSkillLevel(100); // sets value
-console.log(ninja.getSkillLevel()); // gets valueaaaa
+console.log(ninja.getSkillLevel()); // gets value

@@ -1,6 +1,7 @@
+// Object.defineProperty is complicated, but useful when we need private object properties
 function Ninja() {
   let _skillLevel = 0; // _private variable
-  Object.defineProperty(this, 'skillLevel', { //  (object, 'property')
+  Object.defineProperty(this, 'skillLevel', { //  (object, 'property') , defining a property name skillLevel
     get: () => { // get method is called whenever we read the property
       console.log('The get method is called');
       return _skillLevel;

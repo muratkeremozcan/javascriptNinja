@@ -11,8 +11,8 @@ function makeLoggable(target) { // takes a target object and makes it loggable
   });
 }
 
-let ninja = { name: "Yoshi" }; // an object to serve as the TARGET OBJECT of the proxy
-ninja = makeLoggable(ninja);
+let ninja = { name: "Yoshi" }; // an object to serve as the TARGET OBJECT of the proxy to make things loggable
+ninja = makeLoggable(ninja); // the object gets used as a target for a newly created proxy. Then, assign proxy to the ninja object, overriding it
 
 console.log(ninja.name); // target.property
 
