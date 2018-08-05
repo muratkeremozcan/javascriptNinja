@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="first" />
+  <input id="second" />
+  <script>
+    const elems = {
+      length: 0, // to store count of elements
+      add: function(elem){ // method to add elements to a collection
+        Array.prototype.push.call(this, elem);  // call takes the OBJECT as FUNCTION CONTEXT and the ARGUMENTS are passed in DIRECTLY
+      },
+      gather: function(id){
+        this.add(document.getElementById(id)); // method to find elements by their id values and add them to the collection
+      },
+      find: function(callback) {
+        return Array.prototype.find.call(this, callback); // method to find elements
+      }
+    };
+    elems.gather("first");
+    console.log(elems.length);
+    
+    elems.gather("second");
+    console.log(elems.length);
+    
+    const found = elems.find(elem => {
+      return elem.id ==="second";
+    });
+    console.log(found);
+  </script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@ function Folder() {
   return new Proxy({}, {
     get: (target, property) => {
       console.log('Reading ' + property);
-      if (!(property in target)) { // if the accessed property doesn't exist, create it
+      if (!(property in target)) { // if the accessed property doesn't exist, a new folder is created and assigned to the property
         target[property] = new Folder();
       }
       return target[property];
