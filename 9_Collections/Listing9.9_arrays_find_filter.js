@@ -9,7 +9,7 @@ const ninjas = [{
   },
   {
     name: "Kuma",
-    // weapon: "wakizashi" // toggle this and other matching properties to test
+    weapon: "wakizashi" // toggle this and other matching properties to test
   }
 ];
 // FIND method: inputArray.find

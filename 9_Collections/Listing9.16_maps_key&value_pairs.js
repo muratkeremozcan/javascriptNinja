@@ -6,6 +6,7 @@ const ninja3 = {name: "Kuma"};
 
 ninjaIslandMap.set(ninja1, { homeIsland: "Honshu"} ); // MAP.SET(KEY, {VALUE}) method for creating key-value pairs
 ninjaIslandMap.set(ninja2, { homeIsland: "Hokkaido"} ); // map.set(key, {value})
+ninjaIslandMap.set(ninja2, { homeIsland: "Bokkadio"} ); // KEY overwrites
 
 console.log(ninjaIslandMap); // Map { {key => value}, {key => value} }
 console.log(ninjaIslandMap.size); // MAP.SIZE method to get the map size...

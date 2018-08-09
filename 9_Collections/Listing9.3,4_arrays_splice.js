@@ -13,3 +13,6 @@ console.log(removeditems); // splice returns an array of the removed items
 console.log(ninjas); // splice inserts the arguments into the spot of the removed array element(s)
 console.log(ninjas.length);
 
+ninjas.splice(3, 1); // controlled delete item
+console.log(ninjas);
+
