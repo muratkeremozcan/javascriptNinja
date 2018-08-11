@@ -17,6 +17,7 @@ const pattern = /^((\w+)|(\\.))+$/; // this regex allows any sequence composed o
   ];
 
   for (let n = 0; n < tests.length; n++) {
-    console.log(pattern.test((tests[n])), tests[n]);
+    // The test() method executes a search for a match between a regular expression and a specified string. Returns true or false.
+    console.log(pattern.test((tests[n])), tests[n]); //
     assert(pattern.test(tests[n]), tests[n] + " is a valid identifier");
   }
