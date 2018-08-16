@@ -1,5 +1,5 @@
 var assert = require('assert');
-// the purpose of a constructor is to cause a new object to be created and initialized (instantiated)
+// the purpose of a constructor is to cause new objects to be created and initialized (instantiated)
 function Ninja() { // a constructor that creates a skulk property on whatever object it's invoked on
   this.skulk = function() { // a property named skulk is added to the object, which makes skulk a method
     return this;
@@ -7,13 +7,14 @@ function Ninja() { // a constructor that creates a skulk property on whatever ob
 }
 // ES6 version
 class NinjaES2015 {
-  constructor() {
+  constructor() { // in ES6 you specifically indicate that the function is a constructor function
     this.skulk = function () {
       return this;
     };
   }
 }
 // new instances invoked by Ninja() constructor
+// there is nothing special about a constructor function. The only difference is how it is invoked with the NEW keyword
 // when calling a function with keyword NEW, a new empty object is created and set as THIS: the constructor function's context
 var ninja1 = new Ninja();
 var ninja2 = new Ninja();

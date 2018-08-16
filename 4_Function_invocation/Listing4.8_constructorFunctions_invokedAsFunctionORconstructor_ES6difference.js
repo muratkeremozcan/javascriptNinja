@@ -24,3 +24,11 @@ assert(ninja3.skulk() === true, 'ninja value not true');
 
 assert(typeof ninja1 === 'object', 'ninja1 is not an object');
 assert(typeof ninja1.skulk === 'function', 'ninja3 does not have a skulk method')
+
+// IMPORTANT: if we call it as a constructor with the NEW keyword, a new object is constructed and returned
+// if we define a function as a function, it returns a value (return 1)
+console.log(ninja1.skulk());
+console.log(ninja3.skulk());
+
+console.log(Ninja());
+console.log(NinjaES2015()); // IMPORTANT: ES6 disallows constructor functions from being invoked as regular functions

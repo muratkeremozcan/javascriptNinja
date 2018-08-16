@@ -9,6 +9,7 @@ function sum(...parameters) { // the difference & advantage in rest parameters i
 }
 
 // function called with any number of parameters called works
-assert(sum(1,2) === 4, "error adding numbers");
+assert(sum(1,2) === 3, "error adding numbers");
 assert(sum(1, 2, 3) === 6, "error adding numbers");
 assert(sum(1, 2, 3, 4) === 10, "error adding numbers");
+console.log(sum(4, 5, 10, 20));

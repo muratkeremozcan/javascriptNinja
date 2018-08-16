@@ -1,3 +1,4 @@
+'use strict';
 var assert = require('assert');
 
 function juggle() { // this function adds the arguments and puts the result onto the passed in object as the function context
@@ -11,9 +12,9 @@ function juggle() { // this function adds the arguments and puts the result onto
 var ninja1 = {}; // empty objects initially
 var ninja2 = {};
 
-// function.apply(objects, args)
+// IMPORTANT: function.apply(objects, [args])
 juggle.apply(ninja1, [1,2,3,4]); // apply takes the OBJECT as FUNCTION CONTEXT and an ARRAY of values to be used as ARGUMENTS
+// IMPORTANT: function.call(object, args)
 juggle.call(ninja2, 5,6,7,8); // call takes the OBJECT as FUNCTION CONTEXT and the ARGUMENTS are passed in DIRECTLY
-/* use apply if your arguments are already in an array. Use call otherwise */
-assert(ninja1.result === 10, 'not juggled via apply');
-assert(ninja2.result === 26, 'not juggled via call');
+console.log(juggle.apply(ninja1, [1,2,3,4])); // use apply if your arguments are already in an array.
+console.log(juggle.call(ninja2, 5,6,7,8)); //  Use call otherwise
