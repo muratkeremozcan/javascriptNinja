@@ -7,7 +7,7 @@ function reportActivity() {
 
   for (var i = 1; i < 3; i++) {
     // IMPORTANT: within this scope, we have access to scope of function  reportActivity and global scope
-    var forMessage = globalNinja + " " + functionActivity; // function local vars i and forMessage
+    var forMessage = globalNinja + " " + functionActivity; // function local vars i and forMessage. IMPORTANT: the function scope has access to the for block's var i and var forMessage
     assert (forMessage === "Yoshi jumping", "error: Yoshi isn't jumping within the for block.");
     assert (i, "error: current loop counter doesn't exist");
     console.log(i);

@@ -30,7 +30,15 @@ console.log("\nthe inner variable functionActivity 's type is :", typeof functio
 console.log("the inner variable i 's type is :", typeof i);
 console.log("the inner variable forMessage 's type is :", typeof forMessage);
 
-// IMPORTANT :  We can modify the properties of constants, cannot add new properties to an object constant but can modify, can modify an array's properties
-objectConst.weapon = "washizaki";
-anArrayConst.crazyModifyProperty = "nunchuck";
+// IMPORTANT :  We can modify the properties of constants, cannot add new properties to an object constant but can modify, can modify an array's properties and add new properties
+objectConst.weapon = "washizaki"; // can only modify the properties of const variable
+anArrayConst.crazyModifyProperty = "nunchuck"; 
 console.log('\n We can modify the properties of constants : ', objectConst.weapon + ' and ' + anArrayConst.crazyModifyProperty);
+
+objectConst.skill = "slashAndDash";
+anArrayConst.madeUpProperty = "madeUP!";
+console.log(objectConst.slashAndDash); // cannot add properties to const variable
+console.log(anArrayConst.madeUpProperty); // can add properties to const array
+
+anArrayConst.push('extending the array'); // can push to const array
+console.log(anArrayConst);
