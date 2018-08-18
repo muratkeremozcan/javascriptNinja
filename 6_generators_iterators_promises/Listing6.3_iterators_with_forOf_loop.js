@@ -8,7 +8,7 @@ function* WeaponGenerator() { // * is the syntax for generator function
 }
 // const weaponsIterator = WeaponGenerator();
 // let item;
-// while(!(item = weaponsIterator.next()).done) {
+// while(!(item = weaponsIterator.next()).done) { // set iterator.next()'s value to item. iterator.next().done should give false until true and done
 //   console.log(item.value);
 // }
 

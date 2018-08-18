@@ -6,7 +6,7 @@ function getJSON(url) {
     const request = new XMLHttpRequest(); // creates an XMLHTTPRequest object
     request.open("GET", url); // initializes the request 
     request.onload = function () { // on load, registers an event handler that will be called if the server has loaded
-      try { // ERROR TYPE 2 server responding with unanticipated data ()   (change get passed in url to  '/data/ninjas.json')
+      try { // ERROR TYPE 2 server responding with unanticipated data ()   (change get passed in url to  '/data/ninja.json')
         if (this.status === 200) { // server responded, but use the result only if the server responds with status 200 (everything OK)
           console.log('status: ', this.status);
           resolve(JSON.parse(this.responseText)); // ERROR TYPE 3 invalid json. if it succeeds, resolve the promise with the parsed object (mess with json or use only 'this.response')
@@ -27,7 +27,7 @@ function getJSON(url) {
 // CATCH SYNTAX IS MUCH EASIER AND ENABLES LESS CODE
 // specifies multiple sequential steps by chaining in then calls
 getJSON('http://localhost:8080/data/ninjas.json')
-  .then(ninjas => getJSON(ninjas[0].missionsUrl))
+  .then(ninjas => getJSON(ninjas[1].missionsUrl))
   .then(missions => getJSON(missions[0].detailsUrl))
   .then(plan => console.log(plan.target))
   .catch(error => console.log('should not be here ', error)); // catches promise rejections in any of the steps

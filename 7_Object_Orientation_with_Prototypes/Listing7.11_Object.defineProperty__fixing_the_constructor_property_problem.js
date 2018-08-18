@@ -8,7 +8,7 @@ Ninja.prototype = new Person(); // SubClass.prototype = new SuperClass()
 // we can solve this problem by defining a new constructor property on the Ninja.prototype
 
 // Object.defineProperty method (object, "name of property" , {attributes of property})
-Object.defineProperty(Ninja.prototype, "constructor", {
+D(Ninja.prototype, "constructor", {
   enumerable: false,
   value: Ninja, // change this to test
   writable: true
@@ -18,17 +18,15 @@ var ninja = new Ninja();
 
 console.log(ninja.constructor);
 
-for (let prop in Ninja.prototype) { // the constructor is not enumerable and keeps valaue Ninja
+for (let prop in Ninja.prototype) { // the constructor is not enumerable and keeps value Ninja
   console.log(prop);
 }
 
-console.log(typeof ninja.dance);
 console.log(typeof Ninja); // function
 console.log(typeof Ninja); // function
 console.log(typeof Person); // function
 console.log(ninja instanceof Ninja); // true
 console.log(ninja instanceof Person); // true
 console.log(ninja instanceof Object); // true
-console.log(typeof ninja.dance); // function
 
-console.log('constructor' in ninja); // this returns true and is actually in the Ninja object
+console.log('constructor' in ninja); // this returns true, but the constructor belongs to  Person function

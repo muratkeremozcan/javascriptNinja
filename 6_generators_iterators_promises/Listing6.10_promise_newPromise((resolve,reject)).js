@@ -6,9 +6,14 @@ const ninjaPromise = new Promise( (resolve, reject) => { // new Promise construc
 });
 
 // we use the promise by calling the built-in THEN method, to which we pass 2 callback functions : a SUCCESS callback and a FAILURE callback
+// the THEN method is used to register a callback that will be executed when the promise successfully resolves and another callback to be executed when the promise fails
 ninjaPromise.then( ninja => { // SUCCESS CALLBACK, called if resolved successfully
   console.log(ninja);
   assert(ninja === 'Hattori');
 }, err => { // FAILURE CALLBACK, if error
   console.log('there was an error', err);
 });
+// PERK of PROMISES over CALLBACKs
+// try catch statements
+// easier error handling
+// performing sequences of steps is easier

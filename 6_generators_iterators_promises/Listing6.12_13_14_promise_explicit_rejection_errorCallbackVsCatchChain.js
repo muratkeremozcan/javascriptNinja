@@ -1,3 +1,4 @@
+// 6.12 explicitly rejecting a promise
 const promiseExplicitReject = new Promise( (resolve, reject) => {
   reject('Explicitly reject a promise');
 });
@@ -8,7 +9,7 @@ promiseExplicitReject.then( () => {
   console.log('the promise was explicitly rejected');
 });
 
-// CHAINING CATCH
+// 6.13 CHAINING CATCH. Chaining catch can be more useful when working with chains of promises
 const promiseExplicitRejectWithCatch = new Promise( (resolve, reject) => { // alternative syntax for handling promise rejection
   reject('Explicitly reject a promise');
 });
@@ -21,7 +22,7 @@ promiseExplicitRejectWithCatch.then( () => {
 
 // IMPLICITLY REJECT 
 const promiseImplicitReject = new Promise ( (resolve, reject) => {
-  undeclaredVariable++; // this variable is not defined, will throw implicit
+  undeclaredVariable++; // this variable is not defined, will throw implicit reject
 });
 
 promiseImplicitReject.then( () => {

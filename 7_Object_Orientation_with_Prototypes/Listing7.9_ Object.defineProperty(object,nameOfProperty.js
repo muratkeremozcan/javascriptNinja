@@ -11,6 +11,7 @@ Object.defineProperty(ninja, "sneaky", { // Object.defineProperty method used to
 });
 
 console.log("sneaky" in ninja); // true
+console.log(ninja.sneaky);
 
 for (let prop in ninja) { // using the for-in loop to iterate over ninja's enumerable properties
   console.log(prop); // the new property "sneaky" will show up if enumerable is true

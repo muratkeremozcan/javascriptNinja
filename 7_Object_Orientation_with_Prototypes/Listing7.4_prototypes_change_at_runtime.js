@@ -11,13 +11,13 @@ Ninja.prototype.swingSword = function() { // adds a method to the prototype afte
 
 console.log(ninja1.swingSword()); // prototype can be modified on the go
 
-Ninja.prototype = { // overrides the Ninja's prototype 
+Ninja.prototype = { // overrides the Ninja's prototype
   pierce: function() {
     return true;
   }
 };
 
-console.log(ninja1.swingSword()); // NEW: ninja1 object keeps a reference to the old ninja prototype, ninja1's prototype did not get modified 
+console.log(ninja1.swingSword()); // NEW: ninja1 object keeps a reference to the old ninja prototype, ninja1's prototype did not get modified
 
 const ninja2 = new Ninja();
 console.log(ninja2.pierce());

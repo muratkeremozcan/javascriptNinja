@@ -24,7 +24,7 @@ function getJSON(url) {
     request.send(); // send the request
   });
 }
-// the promise.all method takes an array of promises, and creates a new promise that succeeds if all promises succeed and fails if any promise fails
+// the PROMISE.ALL method takes an array of promises, and creates a new promise that succeeds if all promises succeed and fails if any promise fails
 Promise.all([
     getJSON('http://localhost:8080/data/ninjas.json'),
     getJSON('http://localhost:8080/data/mapInfo.json'),
@@ -44,11 +44,3 @@ Promise.all([
   }).catch(error => {
     console.log(error);
   });
-
-
-// CATCH SYNTAX IS MUCH EASIER AND ENABLES LESS CODE
-// getJSON('http://localhost:8080/data/ninjas.json')
-//   .then(ninjas => getJSON(ninjas[0].missionsUrl))
-//   .then(missions => getJSON(missions[0].detailsUrl))
-//   .then(plan => console.log(plan.target))
-//   .catch(error => console.log('should not be here ', error));

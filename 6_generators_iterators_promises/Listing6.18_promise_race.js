@@ -24,7 +24,7 @@ function getJSON(url) {
     request.send(); // send the request
   });
 }
-// the promise.race method takes an array of promises and returns a new promise that resolves or rejejcts as soon as the first of the promises resolves or rejects
+// the promise.race method takes an array of promises and returns a new promise that resolves or rejects as soon as the first of the promises resolves or rejects
 Promise.race([
     getJSON('http://localhost:8080/data/yoshi.json'),
     getJSON('http://localhost:8080/data/hatori.json'),

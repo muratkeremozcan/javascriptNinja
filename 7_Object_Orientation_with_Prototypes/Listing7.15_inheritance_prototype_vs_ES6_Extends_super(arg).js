@@ -13,7 +13,7 @@ Object.defineProperty(Ninja.prototype, "constructor", { // Object.defineProperty
   writable: true
 });
 
-// INHERITANCE IN ES6
+// INHERITANCE IN ES6 : the advantage is not having to think about side effects of overriding the constructor property of the child ( no need to do the Object.defineProperty juju )
 class PersonClass {
   constructor(name) {
     this.name = name;
@@ -38,6 +38,7 @@ console.log(person instanceof PersonClass);
 console.log(person.dance()); // the class instance has access to the methods of the class
 console.log(person.name); // the class instance has access to the constructor property
 console.log(person instanceof Ninja); // it's not an instance of the sub class
+// console.log(person.wieldWeapon()); // parent class cannot access child class's method
 
 var ninja = new NinjaClass("Yoshi", "Wakizashi");
 console.log(ninja instanceof PersonClass);
