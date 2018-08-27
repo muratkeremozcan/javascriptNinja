@@ -3,12 +3,12 @@ Set is an UNORDERED collection of UNIQUE objects, doesn't allow DUPLICATES, whil
 */
 const ninjas = new Set(["Kuma", "Hattori", "Yagyu", "Hattori"]); // Set constructor can take an array of items with which the set is initialized
 
-console.log(ninjas.has("Hattori"));
+console.log(ninjas.has("Hattori")); // SET.HAS
 console.log(ninjas.size); // 3 , discards any duplicate items
 console.log(ninjas);
 
 console.log(ninjas.has("Yoshi"));
-ninjas.add("Yoshi");
+ninjas.add("Yoshi"); // SET.ADD()
 console.log(ninjas.size); // you can add new items that aren't already contained in the set
 console.log(ninjas);
 

@@ -15,4 +15,3 @@ console.log(ninjas.length);
 
 ninjas.splice(3, 1); // controlled delete item
 console.log(ninjas);
-

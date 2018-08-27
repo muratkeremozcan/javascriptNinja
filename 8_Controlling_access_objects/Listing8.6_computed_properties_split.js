@@ -1,3 +1,4 @@
+// COMPUTED PROPERTies provide use get and set methods to modify other properties indirectly
 const shogun = {
   name: "Yoshiaki",
   clan: "Ashikaga",
@@ -5,7 +6,7 @@ const shogun = {
     return this.name + " " + this.clan;
   },
   set fullTitle(value) { // setter method on a property of an object literal
-    const segments = value.split(" "); 
+    const segments = value.split(" ");
     this.name = segments[0]; // update the standard properties of the object literal
     this.clan = segments[1];
   }

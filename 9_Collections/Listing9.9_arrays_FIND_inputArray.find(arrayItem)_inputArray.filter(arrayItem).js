@@ -26,3 +26,6 @@ console.log(ninjaWithKatana); // FIND returns UNDEFINED if the item with the con
 // FILTER method : inputArray.filter
 const armedNinjas = ninjas.filter( ninja => "weapon" in ninja);  // iterate through the input array with the callback condition, return ALL array items that satisfy the condition
 console.log(armedNinjas);
+
+const armedNinjasMap = ninjas.map( ninja => "weapon" in ninja);
+console.log(armedNinjasMap);

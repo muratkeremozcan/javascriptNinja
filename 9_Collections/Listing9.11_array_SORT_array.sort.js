@@ -4,6 +4,8 @@
 // a-b : return + : a > b  -> push a right
 // a-b : return - : a < b  -> push a left
 
+// compare with .37
+
 const ninjas = [{
     name: "Yoshi"
   },

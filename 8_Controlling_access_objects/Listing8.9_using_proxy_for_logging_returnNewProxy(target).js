@@ -1,3 +1,10 @@
+// proxy helps control access to the object by using the traps (get and set) and helps define custom actions
+// used for:
+// logging  -> THIS EXAMPLE
+// performance measurements
+// data validation
+// auto-populating object properties
+
 function makeLoggable(target) { // takes a target object and makes it loggable
   return new Proxy(target, {
     get: (target, property) => { // a get trap that logs property reads
@@ -5,7 +12,7 @@ function makeLoggable(target) { // takes a target object and makes it loggable
       return target[property];
     },
     set: (target, property, value) => { // a set trap that logs property writes
-      console.log('writing value ' + value + 'to ' + property);
+      console.log('writing value ' + value + ' to ' + property);
       target[property] = value;
     }
   });

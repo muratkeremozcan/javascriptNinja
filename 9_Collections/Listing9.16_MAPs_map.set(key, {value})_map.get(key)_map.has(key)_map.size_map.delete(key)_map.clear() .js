@@ -29,6 +29,8 @@ console.log(ninjaIslandMap.get(ninja1)); // has been deleted
 console.log(ninjaIslandMap.get(ninja2));
 console.log(ninjaIslandMap.get(ninja3)); // no 3rd key-value pair, undefined
 
+console.log(ninjaIslandMap.size); // MAP.SIZE
+
 ninjaIslandMap.clear(); // MAP.CLEAR()
 console.log(ninjaIslandMap);
 console.log(ninjaIslandMap.size);

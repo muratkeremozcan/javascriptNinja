@@ -9,7 +9,7 @@ for (let item of directory){ // iterate though each key-value pair in the map
   console.log(item); // each iteration gives a two-item array: [key, value]
 }
 
-console.log(directory.keys());
+console.log(directory.keys()); // MAP.KEYS()
 
 for (let key of directory.keys()){ // iterate through keys
   console.log(key);
@@ -17,7 +17,7 @@ for (let key of directory.keys()){ // iterate through keys
   console.log(directory.has(key)); // you can get the value of each key
 }
 
-console.log(directory.values());
+console.log(directory.values()); // MAP.VALUES
 for (let value of directory.values()){ // iterate through values
   console.log(value);
   console.log(directory.get(value)); // no such thing as getting the key from the value

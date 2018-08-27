@@ -6,10 +6,10 @@ console.log(ninjas.length);
 console.log(samurai.length);
 
 console.log(ninjas[0]); // first item
-console.log(samurai[samurai.length-1]); // last item
+console.log(samurai[samurai.length-1]); // last item = array.length-1
 
-console.log(ninjas[3]);
-console.log(samurai[2]);
+console.log(ninjas[3]); // JS arrays are objects
+console.log(samurai[2]); // just as we get undefined for a non-existing object, we get undefined for a non-existing array index
 
 ninjas[4] = "Ishi";
 console.log(ninjas.length); // array length gets auto-extended

@@ -26,7 +26,7 @@ y   sticky matching
 u   unicode use
 
 []     to specify a set o characters, a single character() to match  [abc]  also a range [a-z]
-^      pattern must appear in the beginning of a string  [^abc]
+^      pattern must appear in the beginning of a string  [^abc]     if before a set ^[] used to negate the that set ex: ^[0-9]  mean anything but digits
 $      pattern must appear in the end of a string
 ?      term is optional (can appear 0 or 1 time)        /t?est/   ->  est, test
 *      term should appear 0 to many times              /t*est/   ->  est, test, ttest, tttest
@@ -36,7 +36,7 @@ $      pattern must appear in the end of a string
 ?:     to indicate a () should not result in a capture     /((?:ninja-)+)sword/
 {}     to specify fixed number of repetitions, range or open ended          /a{4}   /a{4,10}   /a{4,}
 |      to specify OR logic                            /(ab)+|(cd)+/
-\1 \2..portions of a string that are successfully matched can be back-referenced with a backslah followed by the number of the capture
+\1 \2..portions of a string that are successfully matched can be back-referenced with a backslash followed by the number of the capture
 */
 const pattern = /<(\w+)([^>]*)>(.*?)<\/\1>/g; // we use /1 to refer to the first capture within the expression
 

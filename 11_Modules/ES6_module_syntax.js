@@ -14,4 +14,4 @@ import Ninja3 from  "../Ninja.js";      // import default export
 import {ninja4, Ninja4} from "../Ninja.js";  // import named exprts
 
 import * as Ninja5 from "./Ninja.js"; // import all named exports from a module
-import { ninja as iNinja } from "./Ninja.js";   //import a named export with alias
+import { ninja as iNinja } from "./Ninja.js";   //import a named export with alias

@@ -34,7 +34,7 @@
       assert(div.style.borderWidth === '0', 'border was recorded'); // style object's inherited border style was NOT recorded
       assert(div.style.fontSize === '1.8em', 'font-size was recorded'); // style object's inherited font-size was NOT recorded
 
-      // IMPORTANT: you can set the style object's properties
+      // IMPORTANT: you can set the style object's properties, style object's property also takes precedence over inherited CSS style sheet
       div.style.borderWidth = "4px"; // replaces the borderWidth style
       assert(div.style.borderWidth === '4px', 'borderWidth was replaced'); // this causes borderWidth property to appear in the style property of the style object
       console.log(div.style.borderWidth); // will show

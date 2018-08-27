@@ -1,3 +1,10 @@
+// proxy helps control access to the object by using the traps (get and set) and helps define custom actions
+// used for:
+// logging
+// performance measurements
+// data validation
+// auto-populating object properties THIS EXAMPLE
+// negative array indexes
 function Folder() {
   return new Proxy({}, {
     get: (target, property) => {

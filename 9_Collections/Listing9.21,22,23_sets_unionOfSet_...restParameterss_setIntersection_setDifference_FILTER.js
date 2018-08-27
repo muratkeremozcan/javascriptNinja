@@ -1,4 +1,4 @@
-// 9.21 combining sets
+// 9.21 combining sets
 const ninjas = new Set(["Kuma", "Hattori", "Yagyu"]);
 const samurai = new Set(["Hattori", "Oda", "Tomoe"]); // duplicate Hattori
 

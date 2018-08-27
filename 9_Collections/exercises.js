@@ -4,7 +4,7 @@ samurai.push("Oda");
 samurai.unshift("Tomoe");
 console.log(samurai);
 
-samurai.splice(1, 0, "Hattori", "Takeda");
+samurai.splice(1, 0, "Hattori", "Takeda"); // can use SPLICE to not delete and just add items
 console.log(samurai);
 
 

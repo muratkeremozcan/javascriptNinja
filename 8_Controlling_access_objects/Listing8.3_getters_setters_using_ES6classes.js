@@ -11,6 +11,7 @@ class NinjaCollection {
     this.ninjas[0] = value;
   }
 }
+// a get method is implicitly called when we read, a set method implicitly called when we write to a property
 const ninjaCollection = new NinjaCollection(); // create an object instance
 console.log(ninjaCollection.firstNinja);
 

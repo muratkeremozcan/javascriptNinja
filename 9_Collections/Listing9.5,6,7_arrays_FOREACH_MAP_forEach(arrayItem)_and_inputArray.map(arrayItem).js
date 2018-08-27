@@ -13,16 +13,15 @@ const ninjas = [{
 ];
 
 // for (let i = 0; i < ninjas.length, i++;) // regular loop
-ninjas.forEach(ninja => {
+ninjas.forEach(ninja => { // for each arrayItem
   console.log(ninja);
 });
 
 // SIMPLE EXTRACTION OF AN ARRAY FROM AN ARRAY : creating new arrays based on existing arrays
 const ninjaNames = []; // create an empty array
-ninjas.forEach(ninja => { // push each ninja weapon into the empty array
-  ninjaNames.push(ninja.name);
+ninjas.forEach(ninja => { // forEach takes a callback for each array item
+  ninjaNames.push(ninja.name); // push each ninja weapon into the empty array
 });
-
 console.log(ninjaNames);
 
 // The better way of creating new arrays based on existing arrays

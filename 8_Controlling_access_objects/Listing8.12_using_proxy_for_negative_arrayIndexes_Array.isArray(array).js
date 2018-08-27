@@ -1,3 +1,11 @@
+// proxy helps control access to the object by using the traps (get and set) and helps define custom actions
+// used for:
+// logging
+// performance measurements
+// data validation
+// auto-populating object properties
+// negative array indexes THIS EXAMPLE
+
 function createNegativeArrayProxy(array) {
   if (!Array.isArray(array)) { // if the target object isn't an array, throw an exception
     throw new TypeError('we expected an array, but no array');
