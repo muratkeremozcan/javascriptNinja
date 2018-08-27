@@ -3,7 +3,7 @@ const ninja = {
   action: "subterfuge"
 };
 
-const concatMessage = "Name: " + ninja.name + "Action: " + ninja.action;
+const concatMessage = "Name: " + ninja.name + " Action: " + ninja.action;
 const templateMessage = `Name: ${ninja.name} Action: ${ninja.action}`; // template literal uses backticks ` ` and placeholders ${}
 const multiLineString =
 `Name: ${ninja.name}
