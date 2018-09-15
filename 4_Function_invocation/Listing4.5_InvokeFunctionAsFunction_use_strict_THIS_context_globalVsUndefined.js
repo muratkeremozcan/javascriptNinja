@@ -1,3 +1,4 @@
+// 'use strict';
 var assert = require('assert');
 
 // Listing 4.5 strict vs non-strict : function context (THIS) is UNDEFINED (in strict mode) , GLOBAL (in  non-strict mode)

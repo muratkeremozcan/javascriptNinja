@@ -1,4 +1,4 @@
-"use strict"; // function context (THIS) : UNDEFINED (in strict mode) , GLOBAL (in  non-strict mode)
+// "use strict"; // function context (THIS) : UNDEFINED (in strict mode) , GLOBAL (in  non-strict mode)
 var assert = require('assert');
 
 /////////////////////////////////////////////////////////////////////////

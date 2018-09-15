@@ -3,11 +3,11 @@
 module.exports = function () {
   return {
     files: [
-      './*.js',
+      './phoneNumbers-text-synchronous.js',
     ],
 
     tests: [
-      './*.js',
+      './test/test.js',
     ],
 
     env: {
